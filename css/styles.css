@@ -68,3 +68,52 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline-color:#9d762c}
 @media(max-width:800px){.header nav{background:#fff}.intro-right{border-left:0;padding-left:0}.experience-nav a:nth-child(3),.experience-nav a:nth-child(4){border-color:#c9d9d5}.activity-card{padding:28px}.guide-grid article:nth-child(even){border-color:#dbe5e2}.author-photo{width:60px;height:60px}}
 @media(max-width:420px){.activity-card{padding:22px}.guide-grid article:nth-child(even){border-left:0}}
 @media print{.author-photo{display:none}}
+
+/* Una edición completa y legible para imprimir o guardar como PDF. */
+@media print{
+  @page{margin:16mm}
+  body{font-family:Arial,Helvetica,sans-serif;font-size:10pt;line-height:1.5;color:#172c40;background:#fff}
+  .header,.skip,button,.experience-nav,.hero-image,.closing-flower,.quote-mark,.share-symbol{display:none!important}
+  .hero,.intro,.experiences,#recuerdos,#atencion,#capacidades,#intereses,.guide,.share,footer{display:block!important}
+  .experience-aside,.prompt,.card-top,.fine-print{display:block!important}
+  .wrap{width:100%;max-width:none;margin:0}
+  .hero{min-height:0;background:#fff;border-bottom:2px solid #123b4a}
+  .hero-copy{padding:0 0 8mm;display:block}
+  .hero h1{font-size:38pt;line-height:1;letter-spacing:-.04em;margin:5mm 0}
+  .hero-sub{font-size:15pt}.hero-text{max-width:none;font-size:10pt}.hero-credit{margin:5mm 0 0}
+  .intro,.experiences,.experience,.guide,.share,footer{padding:8mm 0!important}
+  .intro,.experience,.experience-grid,.share,.footer-grid{display:block!important}
+  .intro-right{border:0;padding:0;max-width:none}
+  .experiences,.tinted,.green-section,footer{background:#fff!important}
+  .section-heading{display:block}.section-heading>p{max-width:none;margin:0}
+  h2,.experience-aside h2{font-size:23pt;margin:2mm 0 4mm;letter-spacing:-.03em}
+  h3{font-size:16pt;margin:0 0 3mm}h4{font-size:13pt}
+  p,.activity-card>p{font-size:10pt;color:#344b55;line-height:1.5}
+  .experience{border-top:1px solid #c9d9d5}
+  .experience-grid{width:100%;gap:0}
+  .experience-aside>p:not(.eyebrow){max-width:none}
+  .big-number{font-size:30pt;color:#397d76;margin:0 0 2mm;letter-spacing:0}
+  .prompt{margin:4mm 0;max-width:none;padding-left:4mm;break-inside:avoid}
+  .prompt p{font-size:11pt;margin:2mm 0}
+  .activity-card,#capacidades .activity-card{padding:5mm;border:1px solid #ccdcd6;box-shadow:none;border-radius:0;break-inside:auto}
+  .card-top{margin-bottom:4mm;padding-bottom:2mm}
+  .word-display{font-size:24pt;padding:4mm;margin:4mm 0;border:1px solid #dce7e3;background:#fff}
+  .divider{margin:5mm 0}.hint{padding:3mm}
+  .steps{margin:4mm 0}.steps li{padding:2mm;margin-bottom:2mm;break-inside:avoid}.step-controls{display:none}
+  .capability-list fieldset{break-inside:avoid;padding:3mm 0}.radio-options{display:flex;gap:3mm;flex-wrap:wrap}
+  .radio-options label,.chips label{font-size:9pt;color:#172c40}
+  .chips{gap:2mm;margin:4mm 0}.chips label{padding:2mm 3mm;border:1px solid #aabeb8}
+  .chips label:has(input:checked){background:#fff;color:#172c40;border:2px solid #123b4a}
+  input[type=radio],input[type=checkbox]{appearance:auto;accent-color:#123b4a;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  .interest-result{background:#fff;border:1px solid #ccdcd6;border-left:2px solid #c5a15b;padding:4mm;margin-top:4mm;break-inside:avoid}
+  .guide-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:4mm}
+  .guide-grid article,.guide-grid article:not(:nth-child(3n+1)){padding:4mm;border:0;border-bottom:1px solid #dbe5e2;break-inside:avoid}
+  .guide-grid h3{font-size:13pt;margin:2mm 0}.guide-grid p{max-width:none}
+  .closing{display:block;background:#fff;color:#172c40;border-top:2px solid #123b4a;border-bottom:1px solid #ccdcd6}
+  .closing-inner{padding:8mm 0;width:100%}.closing blockquote{font-size:20pt;color:#172c40;margin:3mm 0}.closing p:not(.eyebrow),.closing .eyebrow{color:#344b55}
+  .share-box{padding:4mm;background:#fff;border:1px solid #ccdcd6}.share-box .text-link{display:none}
+  .footer-grid>div{margin-bottom:5mm;break-inside:avoid}.footer-bottom{margin-top:4mm;padding-top:3mm;color:#344b55}
+  .author-photo{display:none!important}
+  .eyebrow,.card-top,.footer-label,.guide-grid article span{color:#285d59}
+  a{color:inherit}.text-link{border:0}
+}
